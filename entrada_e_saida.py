@@ -28,7 +28,17 @@ def divide_numero():
     except:
         print("Entrada inválida")
 
+def calcula_imc():
+    try:
+        altura = float(input("Digite sua altura: "))
+        peso = float(input("Digite seu peso: "))
+        imc = peso/(altura*altura)
+        print("O seu IMC é:", imc)
+    except:
+        print("Entrada inválida")
+
 saudar_usuario()
 soma_numeros()
 multiplica_numeros()
 divide_numero()
+calcula_imc()
