@@ -20,6 +20,15 @@ def multiplica_numeros():
     except:
         print("Entrada inválida")
 
+def divide_numero():
+    try:
+        num = float(input("Digite um número: "))
+        resultado = num / 2
+        print("A divisão do número {} por dois é: {}".format(num, resultado))
+    except:
+        print("Entrada inválida")
+
 saudar_usuario()
 soma_numeros()
 multiplica_numeros()
+divide_numero()
