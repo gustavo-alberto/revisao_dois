@@ -11,4 +11,19 @@ def verificar_maioridade():
     except:
         print("Entrada inválida")
 
+def verifica_par_impar():
+    """
+    Crie uma função que verifica se um número digitado pelo usuário é par ou ímpar. Ao final faça um commit no GitHub.
+    Exemplo de entrada: 11 Exemplo de saída: "O número é ímpar."
+    """
+    try:
+        num = int(input("Digite um número: "))
+        if ((num%2) == 0):
+            print("O número é par")
+        else:
+            print("O número é impar")
+    except:
+        print("Entrada inválida")
+
 verificar_maioridade()
+verifica_par_impar()
