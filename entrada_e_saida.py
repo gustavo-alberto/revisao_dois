@@ -11,5 +11,15 @@ def soma_numeros():
     except:
         print("Entrada inválida")
 
+def multiplica_numeros():
+    try:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+        produto = num1 * num2
+        print("A multiplicação entre números fornecidos é:", produto)
+    except:
+        print("Entrada inválida")
+
 saudar_usuario()
 soma_numeros()
+multiplica_numeros()
