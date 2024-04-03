@@ -1,4 +1,4 @@
-def verificar_maioridade():
+def verifica_maioridade():
     """
     Crie uma função para verificar se a pessoa é maior de 18 anos. Se for maior, imprima “Maior de idade”, se for menor imprima “Menor de idade”. Ao final faça um commit no GitHub. Exemplo de entrada: 17 Exemplo de saída: “Menor de idade”
     """
@@ -40,6 +40,6 @@ def verifica_classificacao():
         print("Entrada inválida")
 
 
-verificar_maioridade()
+verifica_maioridade()
 verifica_par_impar()
 verifica_classificacao()
