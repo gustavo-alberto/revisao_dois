@@ -25,5 +25,21 @@ def verifica_par_impar():
     except:
         print("Entrada inválida")
 
+def verifica_classificacao():
+    """
+    Crie uma função que solicita a nota de um aluno e informa sua classificação: aprovado (nota >= 7) ou reprovado (nota <= 6). Ao final faça um commit no GitHub.
+    Exemplo de entrada: 8.5 Exemplo de saída: "Aluno aprovado!"
+    """
+    try:
+        nota = int(input("Digite sua nota: "))
+        if (nota >= 7):
+            print("Aprovado")
+        elif (nota <= 6):
+            print("Reprovado")
+    except:
+        print("Entrada inválida")
+
+
 verificar_maioridade()
 verifica_par_impar()
+verifica_classificacao()
