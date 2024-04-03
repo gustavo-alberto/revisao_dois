@@ -31,7 +31,7 @@ def verifica_classificacao():
     Exemplo de entrada: 8.5 Exemplo de saída: "Aluno aprovado!"
     """
     try:
-        nota = int(input("Digite sua nota: "))
+        nota = float(input("Digite sua nota: "))
         if (nota >= 7):
             print("Aprovado")
         elif (nota <= 6):
