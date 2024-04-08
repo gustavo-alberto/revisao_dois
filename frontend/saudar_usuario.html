@@ -1,0 +1,41 @@
+<!-- Crie uma função que pede o nome do usuário e o imprime com uma saudação. 
+Ao final desta tarefa faça um commit “Resolve questão 1”no repositório remoto.
+Exemplo de resultado: "Olá, [nome do usuário]! Seja bem-vindo(a)! -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            * {font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0;}
+            body {background-color: aliceblue; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 100px;}
+            h1   {color: white; font-size: 38pt;}
+            p    {color: red;}
+            .header {background-color: #680094; display: flex; align-items: center; justify-content: center; padding: 20px; width: 100%;}
+            .content {width: 70%;}
+            .content input {height: 30px; width: 100%; border-radius: 12px; border: solid 1px #680094; padding: 10px}
+            .result {color: #680094;}
+        </style>
+
+        <title>Saudação</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Saudações</h1>
+        </div>
+        <div class="content">
+            <input type="text" id="name" name="name" placeholder="Digite seu nome">
+        </div>
+
+        <h1 class="result" id="result">Olá, </h1>
+
+        <script>
+            document.getElementById("name").addEventListener("input", function() {
+                var inputValue = this.value;
+                document.getElementById("result").innerText = "Olá, " + inputValue;
+            });
+        </script>
+    </body>
+</html>
