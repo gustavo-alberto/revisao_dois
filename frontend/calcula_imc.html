@@ -1,0 +1,54 @@
+<!-- Crie uma função que pede a altura e o peso do usuário, calcula o seu IMC e imprime o resultado. 
+Ao final desta tarefa faça um commit no repositório remoto.
+dica: O cálculo do IMC é: peso/(altura x altura).
+Exemplo de saída: "O seu IMC é: [resultado] " -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            * {font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0;}
+            body {background-color: aliceblue; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 100px;}
+            h1   {color: white; font-size: 38pt;}
+            p    {color: red;}
+            .header {background-color: #680094; display: flex; align-items: center; justify-content: center; padding: 20px; width: 100%;}
+            .content {width: 50%; display: flex; align-items: center; gap: 20px;}
+            .content input {height: 30px; width: 100%; border-radius: 12px; border: solid 1px #680094; padding: 10px}
+            .result {color: #680094; font-size: 38pt;}
+        </style>
+
+        <title>Calculadora de IMC</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Calculadora de IMC</h1>
+        </div>
+        <div class="content">
+            <label for="altura">Altura</label>
+            <input type="number" id="altura" name="altura" step="0.1" placeholder="Digite sua altura em metros">
+            <label for="peso">Peso</label>
+            <input type="number" id="peso" name="peso" step="0.1" placeholder="Digite seu peso em kg">
+        </div>
+
+        <p class="result">Seu IMC é: <span id="imc">--</span></p>
+
+        <script>
+            function calcularIMC() {
+                var altura = parseFloat(document.getElementById("altura").value);
+                var peso = parseFloat(document.getElementById("peso").value);
+
+                if (altura && peso) {
+                    var imc = peso / (altura * altura);
+                    document.getElementById("imc").innerText = imc.toFixed(2);
+                } else {
+                    document.getElementById("imc").innerText = "--";
+                }
+            }
+            document.getElementById("altura").addEventListener("input", calcularIMC);
+            document.getElementById("peso").addEventListener("input", calcularIMC);
+        </script>
+    </body>
+</html>
